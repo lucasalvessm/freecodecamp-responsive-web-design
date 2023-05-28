@@ -1,0 +1,146 @@
+* {
+  --menu-width: 340px;
+  --primary-color: rgb(15, 23, 42);
+  --secondary-color: rgb(148, 163, 184);
+  --white-color: rgb(255, 255, 255);
+  --margin-block: 1rem;
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  display: grid;
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  gap: 2rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-block: 0;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-block: 0;
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin-block: 0;
+}
+
+h4 {
+  font-size: 1.2rem;
+  margin-block: 0;
+}
+
+p {
+  margin-block: var(--margin-block);
+}
+
+code {
+  background-color: rgb(205, 215, 236);
+  padding: 1rem;
+  color: var(--primary-color);
+  border-radius: 0.2rem;
+  margin-block: var(--margin-block);
+  display: inline-block;
+  font-family: Courier, monospace;
+  font-weight: 600;
+}
+
+#navbar {
+  border-right: 1px solid var(--secondary-color);
+  position: fixed;
+  width: var(--menu-width);
+  height: 100vh;
+  padding-inline: 2rem;
+  box-sizing: border-box;
+}
+
+#navbar i.fa-bars {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+#navbar i.fa-bars:hover {
+  color: var(--secondary-color);
+}
+
+#navbar h1 {
+  font-size: 2rem;
+}
+
+#nav-list {
+  padding: unset;
+}
+
+#navbar li {
+  list-style-type: none;
+  margin-block: var(--margin-block);
+}
+
+.nav-link {
+  text-decoration: none;
+  display: block;
+  color: rgb(148, 163, 184);
+}
+
+.nav-link:hover {
+  color: var(--white-color);
+  border-bottom: 1px solid var(--white-color);
+}
+
+#main-doc {
+  margin-left: var(--menu-width);
+  padding-inline: 2rem;
+}
+
+@media (max-width: 800px) {
+  body {
+    position: relative;
+  }
+
+  #navbar {
+    position: sticky;
+    width: auto;
+    height: auto;
+    top: 0;
+    border-right: unset;
+    border-bottom: 1px solid var(--secondary-color);
+    background-color: var(--primary-color);
+    padding-bottom: 1rem;
+    z-index: 1;
+  }
+
+  #navbar i.fa-bars {
+    display: inline-block;
+  }
+
+  #nav-list {
+    opacity: 0;
+    max-height: 0;
+    margin: 0;
+    transition: opacity 0.7s ease, max-height 0.5s ease-in-out;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  #main-doc {
+    margin-left: unset;
+  }
+
+  #nav-list.visible {
+    opacity: 1;
+    max-height: 217px;
+    /* transition: max-height 0.4s ease-in-out; */
+    margin-block: 16px !important;
+  }
+}

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Technical Documentation</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <script
+    src="https://kit.fontawesome.com/8ff041c15c.js"
+    crossorigin="anonymous"
+  ></script>
+  <script defer>
+    const toggleMenu = () => {
+      const nav = document.getElementById("nav-list");
+      if (nav.classList.contains("visible")) {
+        nav.classList.remove("visible");
+      } else {
+        nav.classList.add("visible");
+      }
+    };
+  </script>
+  <body>
+    <nav id="navbar">
+      <header>
+        <h1>Technical Documentation</h1>
+        <i onclick="toggleMenu()" class="fa-solid fa-bars"></i>
+      </header>
+      <ul id="nav-list">
+        <li><a class="nav-link" href="#introduction">Introduction</a></li>
+        <li><a class="nav-link" href="#get_started">Get started</a></li>
+        <li><a class="nav-link" href="#prerequisites">Prerequisites</a></li>
+        <li><a class="nav-link" href="#install_go">Install Go</a></li>
+        <li><a class="nav-link" href="#write_code">Write code</a></li>
+      </ul>
+    </nav>
+    <main id="main-doc">
+      <section class="main-section" id="introduction">
+        <header>
+          <h2>Introduction</h2>
+        </header>
+        <article>
+          <p>
+            The Go programming language is an open source project to make
+            programmers more productive. Go is expressive, concise, clean, and
+            efficient. Its concurrency mechanisms make it easy to write programs
+            that get the most out of multicore and networked machines, while its
+            novel type system enables flexible and modular program construction.
+            Go compiles quickly to machine code yet has the convenience of
+            garbage collection and the power of run-time reflection. It's a
+            fast, statically typed, compiled language that feels like a
+            dynamically typed, interpreted language.
+          </p>
+          <p>Here a simple hello world</p>
+          <code> func main() { fmt.Println("Hello, World!") }</code>
+        </article>
+      </section>
+      <section class="main-section" id="get_started">
+        <header>
+          <h2>Get started</h2>
+        </header>
+        <article>
+          <p>
+            In this tutorial, you'll get a brief introduction to Go programming.
+            Along the way, you will:
+          </p>
+          <ul>
+            <li>Install Go (if you haven't already).</li>
+            <li>Write some simple "Hello, world" code.</li>
+            <li>Use the go command to run your code.</li>
+            <li>
+              Use the Go package discovery tool to find packages you can use in
+              your own code.
+            </li>
+            <li>Call functions of an external module.</li>
+          </ul>
+        </article>
+      </section>
+      <section class="main-section" id="prerequisites">
+        <header>
+          <h2>Prerequisites</h2>
+        </header>
+        <article>
+          <ul>
+            <li>
+              Some programming experience. The code here is pretty simple, but
+              it helps to know something about functions.
+            </li>
+            <li>
+              A tool to edit your code. Any text editor you have will work fine.
+              Most text editors have good support for Go. The most popular are
+              VSCode (free), GoLand (paid), and Vim (free).
+            </li>
+            <li>
+              A command terminal. Go works well using any terminal on Linux and
+              Mac, and on PowerShell or cmd in Windows.
+            </li>
+          </ul>
+        </article>
+      </section>
+      <section class="main-section" id="install_go">
+        <header>
+          <h2>Install Go</h2>
+        </header>
+        <article>
+          <p>Just use the Download and install steps.</p>
+        </article>
+      </section>
+      <section class="main-section" id="write_code">
+        <header>
+          <h2>Write code</h2>
+        </header>
+        <article>
+          <p>Get started with Hello, World.</p>
+          <ol>
+            <li>
+              Open a command prompt and cd to your home directory.
+              <p>On Linux or Mac:</p>
+              <code>cd</code>
+              <p>On Windows:</p>
+              <code>cd %HOMEPATH%</code>
+            </li>
+            <li>
+              Create a hello directory for your first Go source code.
+              <p>For example, use the following commands:</p>
+              <code>mkdir hello <br />cd hello</code>
+            </li>
+            <li>
+              Enable dependency tracking for your code.
+
+              <p>
+                When your code imports packages contained in other modules, you
+                manage those dependencies through your code's own module. That
+                module is defined by a go.mod file that tracks the modules that
+                provide those packages. That go.mod file stays with your code,
+                including in your source code repository.
+              </p>
+              <p>
+                To enable dependency tracking for your code by creating a go.mod
+                file, run the go mod init command, giving it the name of the
+                module your code will be in. The name is the module's module
+                path.
+              </p>
+              <p>
+                In actual development, the module path will typically be the
+                repository location where your source code will be kept. For
+                example, the module path might be github.com/mymodule. If you
+                plan to publish your module for others to use, the module path
+                must be a location from which Go tools can download your module.
+                For more about naming a module with a module path, see Managing
+                dependencies.
+              </p>
+              <p>For the purposes of this tutorial, just use example/hello.</p>
+              <code
+                >$ go mod init example/hello <br />
+                go: creating new go.mod: module example/hello</code
+              >
+            </li>
+          </ol>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>
