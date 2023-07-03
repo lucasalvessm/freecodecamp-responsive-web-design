@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Last Action - Landing Page</title>
+    <link href="styles.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header id="header" class="flex pnd-space">
+      <div class="brand | flex">
+        <img id="header-img" src="https://i.imgur.com/TGbSo5W.png" alt="logo" />
+        <span class="h5">Last Action</span>
+      </div>
+      <nav id="nav-bar">
+        <ul class="flex">
+          <li>
+            <a class="nav-link" href="#reasons-to-play">Reasons to play</a>
+          </li>
+          <li><a class="nav-link" href="#watch-out">Watch out</a></li>
+          <li><a class="nav-link" href="#download-now">Download now</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section id="hero" class="mgn-space pnd-space">
+        <div class="hero-wrapper">
+          <div class="hero-text">
+            <h1 class="h1">
+              Come and enjoy the <span>best experience</span> a FPS can offer
+            </h1>
+            <p>
+              Loved by millions, this game earned the game of the year award
+              this year
+            </p>
+            <form
+              id="form"
+              action="https://www.freecodecamp.com/email-submit"
+              method="post"
+              class="get-started-form | flex"
+            >
+              <div class="form-group">
+                <label for="email">Enter your best email</label>
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="typing..."
+                  required
+                />
+              </div>
+              <input id="submit" style="display: none" type="submit" />
+              <button type="submit">Get started</button>
+            </form>
+          </div>
+          <img
+            id="hero-img"
+            src="https://i.imgur.com/3I3qUUz.png"
+            alt="hero image"
+          />
+        </div>
+      </section>
+      <section class="pnd-space" id="reasons-to-play">
+        <ul>
+          <li>
+            <p class="reason-to-play">
+              <span class="h5">Exciting Action: </span> FPS games are known for
+              their fast-paced and adrenaline-pumping gameplay.
+            </p>
+          </li>
+          <li>
+            <p class="reason-to-play">
+              <span class="h5">Skill and Strategy: </span> FPS games often
+              require players to develop and apply various skills such as
+              aiming, reflexes, coordination, and tactical thinking.
+            </p>
+          </li>
+          <li>
+            <p class="reason-to-play">
+              <span class="h5">Competitive Multiplayer: </span> Many FPS games
+              feature multiplayer modes that allow players to compete against
+              each other.
+            </p>
+          </li>
+        </ul>
+        <img
+          id="reasons-img-1"
+          src="https://images.unsplash.com/photo-1636036769389-343bb250f013?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1172&q=80"
+          alt="reasons image"
+        />
+        <ul>
+          <li>
+            <p class="reason-to-play">
+              <span class="h5">Team Collaboration: </span> Team-based FPS games
+              often require cooperation and coordination with teammates.
+            </p>
+          </li>
+          <li>
+            <p class="reason-to-play">
+              <span class="h5">Immersive Environments:</span> FPS games often
+              provide immersive virtual worlds, whether they are realistic or
+              fantastical.
+            </p>
+          </li>
+          <li>
+            <p class="reason-to-play">
+              <span class="h5">Engaging Storylines:</span> Many FPS games
+              incorporate compelling narratives and storylines.
+            </p>
+          </li>
+        </ul>
+        <img
+          id="reasons-img-2"
+          src="https://images.unsplash.com/photo-1646950887163-25b5bff58eed?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+          alt="reasons image"
+        />
+      </section>
+      <section class="pnd-space center" id="watch-out">
+        <h2 class="h2 center">Watch out</h2>
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/rs87tkNdmW8"
+          title="YouTube video player"
+          id="video"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+      </section>
+      <section id="download-now"></section>
+    </main>
+  </body>
+</html>
